@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#skin{
+				width: 400px;
+				height: 200px;
+				border: 1px solid green;
+			}
+			#c1{
+				width: 400px;
+				height: 200px;
+				border: 1px solid green;
+			}
+			#c2{
+				width: 400px;
+				height: 200px;
+				border: 1px solid green;
+			}
+			#foot{
+				width: 400px;
+				height: 200px;
+				border: 1px solid green;
+			}
+		</style>
+		<script>
+			function change() {
+
+    	if (onclick="test") {
+        	c2.style.display = "block";
+        	other.style.display="none";
+        	
+    	}else{
+        	c2.style.display = "none";
+    	}
+}
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<div id="skin">
+			<div id="c1"></div>
+			<input type="button" name="q2" value="加载更多" id="other" onclick="change()">
+				<textarea name="q2" rows="10" cols="75" id="c2" style="display:none"  class="form-control">
+					
+				</textarea>
+				<div id="foot"></div>
+		</div>
+	</body>
+</html>

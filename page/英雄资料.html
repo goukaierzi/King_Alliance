@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+		<style type="text/css">
+			#outer{
+				width:1910px;
+				height: 3100px;
+				border: 1px solid black;
+				
+				position: relative;
+				background-image: url(img/background.jpg);
+				background-repeat: no-repeat;
+				}
+			#head{
+				width: 1500px;
+				height: 200px;
+				border: 1px solid red;
+				margin-left: 200px;
+				position: absolute;
+				font-size: 0.9em;
+				color: black;
+				/*设置文本阴影部分*/
+				/*右 下 模糊度 
+				 * 阴影部分的颜色值越小，阴影部分越清晰*/
+				text-shadow: 0px 0px 4px #000000;
+				font-weight: bold;
+				font-family: "黑体";
+			
+			}
+			#body{
+				width:1500px ;
+				height: 2700px;
+				margin-left: 200px;
+				margin-top: 200px;
+				border: 1px solid blue;
+				position: absolute;
+			}
+			#body_left{
+				width: 749px;
+				height: 2700px;
+				border: 5px solid green;
+				position: absolute;
+				
+			}
+			#body_right{
+				width: 749px;
+				height: 2700px;
+				border: 3px solid orangered;
+				margin-left: 750px;
+				position: absolute;
+			}
+			#l1{
+				width: 749px;
+				height: 870px;
+				border: 6px solid darkolivegreen;
+				
+			}
+			#l2{
+				width: 749px;
+				height: 870px;
+				border: 2px solid brown;
+				margin-top: 20px;
+				
+			}
+			#l3{
+				width: 749px;
+				height: 870px;
+				border: 2px solid tomato;
+				margin-top: 20px;
+			}
+			#r1{
+				width: 749px;
+				height: 870px;
+				border: 2px solid darkolivegreen;
+				/*background-image: url(img/zhu.gif) ;
+				background-repeat: no-repeat;*/
+			}
+			#r2{
+				width: 749px;
+				height: 870px;
+				border: 2px solid brown;
+				margin-top: 20px;
+			}
+			#r3{
+				width: 749px;
+				height: 870px;
+				border: 2px solid tomato;
+				margin-top: 20px;
+				
+			}
+			#r11{
+				width: 80px;
+				height: 25px;
+				border: 2px solid tomato;
+				margin-top: 310px;
+				margin-left: 420px;
+			}
+			#r12{
+				width: 60px;
+				height: 25px;
+				border: 2px solid tomato;
+				margin-top: 830px;
+				margin-left: 460px;}
+			#r13{
+				width: 60px;
+				height: 25px;
+				border: 2px solid tomato;
+				margin-top: 830px;
+				margin-left: 460px;}
+			#l11{
+				width: 500px;
+				height: 830px;
+				border: 2px solid tomato;
+				margin: auto;
+			}
+			#l12{
+				width: 500px;
+				height: 830px;
+				border: 2px solid tomato;
+				margin: auto;
+			}
+			#l13{
+				width: 500px;
+				height: 830px;
+				border: 2px solid tomato;
+				margin: auto;
+			}
+			#l111l{
+				width: 175px;
+				height: 100px;
+				border: 2px solid tomato;
+				margin-top: 30px;
+				margin-left: 30px;
+				font-size: 4.5em;
+				color: black;
+				/*设置文本阴影部分*/
+				/*右 下 模糊度 
+				 * 阴影部分的颜色值越小，阴影部分越清晰*/
+				text-shadow: 0px 0px 4px gold;
+				font-weight: bold;
+				font-family: "楷体";
+				/*margin: auto;*/
+			}
+				#l111r{
+				width: 175px;
+				height: 100px;
+				border: 2px solid tomato;
+				margin-top: -100px;
+				margin-left: 305px;
+				/*margin: auto;*/
+			}
+			#l112{
+				width: 450px;
+				height: 100px;
+				border: 2px solid tomato;
+				margin-top: 30px;
+				margin-left: 30px;
+				font-size: 0.7em;
+				/*margin: auto;*/
+			}
+			#l113{
+				width: 450px;
+				height: 500px;
+				border: 2px solid tomato;
+				margin-top: 30px;
+				margin-left: 30px;
+			}
+			#1{
+				width: 70px;
+				height: 70px;
+				border: 1px solid black;
+				/*margin-top: 10px;
+				margin-left: 10px;*/
+			}
+			#l121l{
+				width: 175px;
+				height: 100px;
+				border: 2px solid tomato;
+				margin-top: 30px;
+				margin-left: 30px;
+					font-size: 4.5em;
+				color: black;
+				/*设置文本阴影部分*/
+				/*右 下 模糊度 
+				 * 阴影部分的颜色值越小，阴影部分越清晰*/
+				text-shadow: 0px 0px 4px gold;
+				font-weight: bold;
+				font-family: "楷体";
+				/*margin: auto;*/
+			}
+				#l121r{
+				width: 175px;
+				height: 100px;
+				border: 2px solid tomato;
+				margin-top: -100px;
+				margin-left: 305px;
+				/*margin: auto;*/
+			}
+			#l122{
+				width: 450px;
+				height: 100px;
+				border: 2px solid tomato;
+				margin-top: 30px;
+				margin-left: 30px;
+				font-size: 0.7em;
+				/*margin: auto;*/
+			}
+			#l123{
+				width: 450px;
+				height: 500px;
+				border: 2px solid tomato;
+				margin-top: 30px;
+				margin-left: 30px;
+			}
+			#l131l{
+				width: 175px;
+				height: 100px;
+				border: 2px solid tomato;
+				margin-top: 30px;
+				margin-left: 30px;
+				font-size: 4.5em;
+				color: black;
+				/*设置文本阴影部分*/
+				/*右 下 模糊度 
+				 * 阴影部分的颜色值越小，阴影部分越清晰*/
+				text-shadow: 0px 0px 4px gold;
+				font-weight: bold;
+				font-family: "楷体";
+				/*margin: auto;*/
+			}
+				#l131r{
+				width: 175px;
+				height: 100px;
+				border: 2px solid tomato;
+				margin-top: -100px;
+				margin-left: 305px;
+				/*margin: auto;*/
+			}
+			#l132{
+				width: 450px;
+				height: 100px;
+				border: 2px solid tomato;
+				margin-top: 30px;
+				margin-left: 30px;
+				font-size: 0.7em;
+				/*margin: auto;*/
+			}
+			#l133{
+				width: 450px;
+				height: 500px;
+				border: 2px solid tomato;
+				margin-top: 30px;
+				margin-left: 30px;
+			}
+			#foot{
+				width: 1100px;
+				height: 100px;
+				margin-left: 100px;
+				margin-top: 2900px;
+				border: 1px solid blue;
+				position: absolute;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<a href="top"></a>
+		<div id="outer">
+			<div id="head">
+			<div class="container-fluid">
+			<div class="row">
+				<nav class="navbar navbar-inverse my-nav" role="navigation">
+			    <div class="container-fluid"> 
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle" data-toggle="collapse"
+			                data-target="#example-navbar-collapse">
+			            <span class="sr-only">切换导航</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			        </button>
+			        <a class="navbar-brand" href="#">江科大苏理工</a>
+			    </div>
+			    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+			        <ul class="nav navbar-nav navbar-right ">
+			            <li class="active"><a href="#">实验楼</a></li>
+			            <li><a href="#">食堂</a></li>
+			            <li class="dropdown">
+			                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			                    教学区<b class="caret"></b>
+			                </a>
+			             
+			            </li>
+			        </ul>
+			    </div>
+			    </div>
+			</nav>
+				
+			</div>
+			</div>
+			<p>
+			&nbsp;&nbsp;&nbsp;<a href="#tanke" >坦克</a>
+			</p>
+			<p>
+			&nbsp;&nbsp;&nbsp;<a href="#sheshou">射手</a>
+			</p>
+			<p>
+			&nbsp;&nbsp;&nbsp;<a href="#fashi">法师</a>
+		</p>
+			<p>
+			&nbsp;&nbsp;&nbsp;<a href="#cike">刺客</a>
+		</p>
+			<p>
+			&nbsp;&nbsp;&nbsp;<a href="#zhanshi">战士</a>
+		</p>
+			</div>
+			<div id="body">
+				<!--<a href="javascript:;" class="mobile" id="">
+                        手机购买<i class="comico i-code"></i>
+                        <div class="codeimg">
+                            <img src="//js01.daoju.qq.com/common/images/channel/revision/lol/code.png" width="166" height="174" alt="二维码">
+                        </div>
+                    </a>-->
+                    <div id="body_left">
+                    	<div id="l1">
+                    		<a href="#"id="sheshou">射手</a>
+                    		<div id="l11" >
+                    			<div id="l111l" align="center">
+                    				射手
+                    			</div>
+                    			<div id="l111r">
+                    				
+                    			</div>
+                    			<div id="l112">
+                    				&nbsp;&nbsp;一般是占用最大的团队资源的位置，需要有强大的击杀能力来终结比赛。<br />
+									拥有强大的单体输出能力，发育良好的情况下，可以快速击杀坦克英雄，形成收割局面，进而终结团战。<br />
+											
+									&nbsp;&nbsp;通过前期压制快速推塔，滚出优势。但可能缺乏后期的收割能力导致容易被翻盘，最好在本方其他位置有收割英雄时选择，更为稳妥。<br />
+									
+									一般等待对手交出关键技能以后切入残局，快速形成连续击杀，进而终结团战。<br />
+
+									&nbsp;&nbsp;*选择近战边路来代替射手，可能会引起队友不理解或者战术混乱，有负面士气影响，要慎重考虑。<br />
+                    			</div>
+                    			<div id="l113">
+                    				
+                    				<div id="1">
+                    					
+                    				</div>
+                    				<!--<div id="2">
+                    					
+                    				</div>
+                    				<div id="3">
+                    					
+                    				</div>
+                    				<div id="4">
+                    					
+                    				</div>
+                    				<div id="5">
+                    					
+                    				</div>
+                    				<div id="6">
+                    					
+                    				</div>
+                    				<div id="7">
+                    					
+                    				</div>
+                    				<div id="8">
+                    					
+                    				</div>
+                    				<div id="9">
+                    					
+                    				</div>
+                    				<div id="10">
+                    					
+                    				</div>-->
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div id="l2">
+                    		<a href="#"id="fashi">法师</a>
+                    		<div id="l12">
+                    			<div id="l121l">
+                    				法师
+                    			</div>
+                    			<div id="l121r">
+                    				
+                    			</div>
+                    			<div id="l122">
+                    				&nbsp;&nbsp;位于中路，方便支援各路打架，大都具有强大的AOE输出能力<br />
+									中前期游走打架能力较强的法师，除中路兵线外，还依赖击杀和助攻获取经济<br />
+									获取足够发育后，具有强大伤害能力的法师。中前期可以尽中单的义务支援战斗，参与地图资源的争夺
+									但相比支援型法师比较软绵无力<br />
+									&nbsp;&nbsp;由于版本节奏变动，发育型法师不太容易获取足够资源<br />
+									发育型法师最好把前几个蓝buff让给打野来支撑节奏<br />
+                    			</div>
+                    			<div id="l123">
+                    				
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div id="l3">
+                    		<a href="#"id="zhanshi">战士</a>
+                    		<div id="l13">
+                    			<div id="l131l">
+                    				战士
+                    			</div>
+                    			<div id="l131r">
+                    				
+                    			</div>
+                    			<div id="l132">
+                    				单线发育的边路英雄，承担的功能较多<br />
+                   
+
+									就是一般说的“能扛能打”的英雄，往往依靠比较高的攻防数值硬刚拼血<br />
+										
+									但是由于机动性和瞬间爆发力的有短板，无法刺杀后排，大多数情况下只能在前排绞肉
+										
+									绞肉型上单因为兼具了坦克承受伤害的能力，解放了打野和辅助的选人空间
+				
+									有位移和瞬间爆发能力，找到机会能单杀C位终结团战的英雄<br />
+
+									带线型主要是通过带线牵制拖后期，自己拥有比较强的单挑能力，能拉扯至少2人回防
+										
+									或者自己拥有全地图支援能力，拉扯一人回防就能起到牵制效果
+										
+									对团队意识和个人意识要求都很高
+
+                    			</div>
+                    			<div id="l133">
+                    				
+                    			</div>
+                    		</div>
+                    	</div>
+                    </div>
+                     <div id="body_right">
+                    	<div id="r1" align="center">
+                    		<br />
+                    		<br />
+                    		<br />
+                    		<br />
+                    		<img src="img/zhu.gif"  />
+                    		<div id="r11">
+                    			<a href="#"id="top">回到顶部</a>
+                    		</div>
+                    		
+                    	</div>
+                    	<div id="r2">
+                    		<div id="r12">
+                    			<a href="#"id="top">回到顶部</a>
+                    		</div>
+                    	</div>
+                    	<div id="r3">
+                    		<div id="r13">
+                    			<a href="#"id="top">回到顶部</a>
+                    		</div>
+                    	</div>
+                    </div>
+			</div>
+			<div id="foot">
+				
+			</div>
+		</div>
+		<script src="plugins/jquery/jquery.min.js"></script>
+		<!--引入bootstrap.min.js-->
+		<script src="plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</body>
+</html>
